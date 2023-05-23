@@ -27,6 +27,11 @@ const Navbar = () => {
         >
           METAVERSES
         </h2>
+        <img
+          src="/menu.svg"
+          className="w-[24px] h-[24px] object-contain"
+          alt="Hamburger icon"
+        />
       </div>
     </motion.div>
   );
