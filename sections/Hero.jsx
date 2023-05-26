@@ -1,14 +1,33 @@
-import React from "react";
+"use client";
+
 import styles from "../styles";
+import { motion } from "framer-motion";
+import {
+  staggerContainer,
+  slideIn,
+  textVariant,
+} from "../utils/motion";
 
 const Hero = () => {
   return (
     <section className="relative">
-      <div className="flex flex-col items-center z-10 relative">
-        <h1 className="text-white font-extrabold text-[100px]">
+      <motion.div
+        variants={staggerContainer}
+        initial={"hidden"}
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.25 }}
+        className="flex flex-col items-center z-20 relative"
+      >
+        <motion.h1
+          variants={textVariant(1.1)}
+          className="text-white font-extrabold text-[100px]"
+        >
           METAVERSE
-        </h1>
-        <div className="flex items-center">
+        </motion.h1>
+        <motion.div
+          variants={textVariant(1.2)}
+          className="flex items-center"
+        >
           <h1 className="text-white font-extrabold text-[100px]">
             MA
           </h1>
@@ -16,26 +35,26 @@ const Hero = () => {
           <h1 className="text-white font-extrabold text-[100px]">
             NESS
           </h1>
-        </div>
-      </div>
-      <div className="relative ml-[100px] h-[350px]">
-        <div className="absolute z-[0] -top-[50px] h-full w-full">
+        </motion.div>
+      </motion.div>
+      <div className="relative h-[350px] z-10">
+        <img
+          src="/cover.png"
+          className="rounded-tl-[120px] h-[350px] absolute
+          right-0 w-4/5 object-cover rounded-bl-[30px] z-10"
+          alt="cover"
+        />
+        <div
+          className="absolute bottom-0 right-[70px] w-[115px]
+          transform translate-y-1/2 z-20"
+        >
           <img
-            src="/cover.png"
-            className="rounded-tl-[100px] h-[350px] w-full object-cover relative rounded-bl-[30px]"
-            alt="cover"
+            src="/stamp.png"
+            className="h-full w-full object-contain"
+            alt="stamp"
           />
-          <div
-            className="absolute bottom-0 right-[70px] w-[115px]
-           transform translate-y-1/2"
-          >
-            <img
-              src="/stamp.png"
-              className="h-full w-full object-contain"
-              alt="stamp"
-            />
-          </div>
         </div>
+        <div className="absolute z-0 w-4/5 h-full rounded-tl-[120px] background-div-gradient -top-[50px] right-0 "></div>
       </div>
     </section>
   );
