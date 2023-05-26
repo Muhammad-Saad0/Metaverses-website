@@ -1,9 +1,7 @@
-'use client';
+"use client";
 
 const GetStarted = () => (
-  <section>
-    Get Started Section
-  </section>
+  <section className="h-44"></section>
 );
 
 export default GetStarted;
