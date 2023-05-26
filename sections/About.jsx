@@ -3,6 +3,7 @@
 import styles from "../styles";
 import { motion } from "framer-motion";
 import { textVariant } from "../utils/motion";
+import TypingText from "../components/TypingText";
 
 const About = () => (
   <section
@@ -22,16 +23,14 @@ const About = () => (
     h-1/3 w-2/3 -bottom-1/4 -right-1/2 z-[0]"
     />
     <div
-      className="about-section-gradient-2 absolute 
+      className="about-section-gradient-2 absolute
     h-1/4 w-2/3 -bottom-0 left-0 z-[0] -rotate-12"
     />
     <div className="relative z-10">
-      <p
-        className="text-gray-400 font-light 
-    text-center text-[12px]"
-      >
-        | About Metaversus
-      </p>
+      <TypingText
+        title={"| About Metaversus"}
+        styles={"text-center"}
+      />
       <div className="max-w-[900px]">
         <motion.p
           variants={textVariant(0.3)}
