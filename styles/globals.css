@@ -10,6 +10,10 @@
   scroll-behavior: smooth;
 }
 
+.is-selected-background {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .background-div-gradient {
   background: linear-gradient(
     43deg,
